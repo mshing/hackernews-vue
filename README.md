@@ -1,4 +1,4 @@
-# mstest
+# hackernews-vue
 
 > A Vue.js project
 
