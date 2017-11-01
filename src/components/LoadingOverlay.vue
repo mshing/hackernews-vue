@@ -1,11 +1,11 @@
 ﻿<template>
   <div class="loading">
-    <div class="icon">
-      <div class="rect1"></div>
-      <div class="rect2"></div>
-      <div class="rect3"></div>
-      <div class="rect4"></div>
-      <div class="rect5"></div>
+    <div class="loading__indicator">
+      <div class="loading__bar loading__bar--rect1"></div>
+      <div class="loading__bar loading__bar--rect2"></div>
+      <div class="loading__bar loading__bar--rect3"></div>
+      <div class="loading__bar loading__bar--rect4"></div>
+      <div class="loading__bar loading__bar--rect5"></div>
     </div>
   </div>
 </template>

@@ -1,13 +1,14 @@
 <template>
   <div id="app">
-    <header>
-      <router-link class="home-link" to="/">V</router-link>
-      <router-link to="/Top/">Top</router-link>
-      <router-link to="/New/">New</router-link>
-      <router-link to="/Show/">Show</router-link>
-      <router-link to="/Ask/">Ask</router-link>
-      <router-link to="/Jobs/">Jobs</router-link>
-      <router-link to="/About/">About</router-link>
+    <header class="header">
+      <router-link class="header__link header__link--home" to="/">V</router-link>
+      <router-link class="header__link" to="/Top/">Top</router-link>
+      <router-link class="header__link" to="/New/">New</router-link>
+      <router-link class="header__link" to="/Show/">Show</router-link>
+      <router-link class="header__link" to="/Ask/">Ask</router-link>
+      <router-link class="header__link" to="/Jobs/">Jobs</router-link>
+      <router-link class="header__link" to="/About/">About</router-link>
+      <router-link class="header__link" to="/Videos/">Videos</router-link>
     </header>
     <main>
         <router-view :key="$route.fullPath"></router-view>

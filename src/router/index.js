@@ -1,47 +1,55 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import About from '@/components/About'
+import NewsPage from '@/containers/NewsPage'
+import AboutPage from '@/containers/AboutPage'
+import VideoPage from '@/containers/VideoPage'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
+  linkActiveClass: 'header__link--active',
+  linkExactActiveClass: 'header__link--exact-active',
   routes: [
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: NewsPage
     },
     {
       path: '/top/',
       name: 'Top',
-      component: Home
+      component: NewsPage
     },
     {
       path: '/new/',
       name: 'New',
-      component: Home
+      component: NewsPage
     },
     {
       path: '/show/',
       name: 'Show',
-      component: Home
+      component: NewsPage
     },
     {
       path: '/ask/',
       name: 'Ask',
-      component: Home
+      component: NewsPage
     },
     {
       path: '/jobs/',
       name: 'Jobs',
-      component: Home
+      component: NewsPage
     },
     {
       path: '/about/',
       name: 'About',
-      component: About
+      component: AboutPage
+    },
+    {
+      path: '/videos/',
+      name: 'Videos',
+      component: VideoPage
     }
   ]
 })

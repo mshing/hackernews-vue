@@ -1,0 +1,88 @@
+﻿.header {
+    height:40px;
+    background:$orange;
+    padding:12px 20px;
+    box-shadow:0px 1px 3px 0px $orange;
+    position:relative;
+
+    &__link {
+        float:left;
+        margin-right:20px;
+        color:$white;
+        opacity:0.7;
+        transition:opacity ease-in 0.2s;
+
+        &:hover,
+        &--active {
+            opacity:1;
+        }
+
+        &--home {
+            display:inline-block;
+            text-align:center;
+            width:20px;
+            height:20px;
+            line-height:18px;
+            border:solid 1px $white;
+            transition:background-color ease-in 0.2s, color ease-in 0.2s;
+
+            &:hover {
+                background:$white;
+                color:$orange;
+            }
+        }
+    }
+}
+
+.page-container {
+    padding:20px 15px;
+
+    &__content {
+        padding:20px 15px;
+        border:solid 1px $darkGray;
+        box-shadow:0px 6px 4px -5px $darkGray;
+        background:$white;
+        margin-bottom:20px;
+    }
+
+    &__title {
+        margin-bottom:20px;
+    }
+}
+
+.button {
+    display:block;
+    border:none;
+    padding:0 15px 0 15px;
+    line-height:30px;
+    height:30px;
+    background:$white;
+    width:auto;
+    text-align:center;
+    margin:15px 0;
+    cursor:pointer;
+    position:relative;
+    transition:box-shadow 0.15s ease-in-out,color 0.15s ease-in-out;
+    border:solid 1px $orange;
+    color:$primaryFont;
+    vertical-align:middle;
+
+    &:hover {
+        box-shadow: 0px 2px 3px rgba($orange, 0.4), inset 50px 50px 50px 50px rgba($orange, 0.1);
+    }
+
+    &:active {
+        box-shadow: 0px 2px 3px rgba($orange, 0.4), inset  50px 50px 50px 50px rgba($orange, 0.8);
+        color:$white;
+    }
+
+    &--inline {
+        display:inline-block;
+        margin:0;
+        margin-left:-1px;
+    }
+
+    &:focus {
+        outline:none;
+    }
+} 

@@ -2,9 +2,9 @@
   <div class="page-container">
     <news-pager v-if="newsItems && newsTotal" :page="page" :itemCount="newsTotal" :clickAction="changePage" :itemsPerPage="itemsPerPage"></news-pager>
 
-    <div class="list">
+    <div class="news-list">
       <transition name="slide-fade">
-        <ul v-bind:class="{ hidden: !listVisible }" v-show="listVisible">
+        <ul class="news-list__container" v-bind:class="{ 'news-list__container--hidden': !listVisible }" v-show="listVisible">
           <news-list-item v-for="(newsItem, index) in newsItems" :item="newsItem" :index="index" :key="newsItem.id"></news-list-item>
         </ul>
       </transition>
@@ -18,7 +18,7 @@ import NewsPager from '@/components/NewsPager'
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'Home',
+  name: 'News',
   components: {
     NewsListItem,
     NewsPager
@@ -85,5 +85,5 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 </style>

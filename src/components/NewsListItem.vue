@@ -1,9 +1,9 @@
 <template>
-  <li>
-    <div class="rating">{{item.score}}</div>
-    <div>
-      <span><a class="title" :href="item.url">{{item.title}}</a> <span>(<a :href="`https://news.ycombinator.com/from?site=${domain}`">{{domain}}</a>)</span> - {{item.type}}</span>
-      <span>by <a :href="`https://news.ycombinator.com/user?id=${item.by}`">{{item.by}}</a> {{timeSince}} | <a :href="`https://news.ycombinator.com/item?id=${item.id}`">{{item.descendants}} comments</a></span>
+  <li class="news-item">
+    <div class="news-item__content news-item__rating">{{item.score}}</div>
+    <div class="news-item__content">
+      <span class="news-item__line"><a class="news-item__title" :href="item.url">{{item.title}}</a> <span>(<a class="news-item__link" :href="`https://news.ycombinator.com/from?site=${domain}`">{{domain}}</a>)</span> - {{item.type}}</span>
+      <span class="news-item__line">by <a class="news-item__link" :href="`https://news.ycombinator.com/user?id=${item.by}`">{{item.by}}</a> {{timeSince}} | <a class="news-item__link" :href="`https://news.ycombinator.com/item?id=${item.id}`">{{item.descendants}} comments</a></span>
     </div>
   </li>
 </template>
@@ -48,6 +48,5 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 </style>
