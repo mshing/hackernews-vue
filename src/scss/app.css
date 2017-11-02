@@ -49,6 +49,45 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+/* Custom global styles */
+body {
+  position: relative;
+  font-family: Calibri;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+  -moz-font-smoothing: antialiased;
+  color: #2F1A45;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  min-width: 360px;
+  font-size: 16px;
+  background: #F2F3F5; }
+
+body,
+html {
+  height: 100%; }
+
+a {
+  cursor: pointer;
+  text-decoration: none; }
+
+input {
+  line-height: 30px;
+  height: 30px;
+  padding: 0 5px;
+  border: solid 1px #E27203; }
+  input:focus {
+    outline: none; }
+
+h1 {
+  font-size: 2rem; }
+
+p {
+  margin-bottom: 10px; }
+
 .header {
   height: 40px;
   background: #E27203;
@@ -74,6 +113,23 @@ table {
       .header__link--home:hover {
         background: #FFF;
         color: #E27203; }
+
+.footer {
+  height: 30px;
+  background: #E27203;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -1px 3px 0px #E27203; }
+  .footer__copy {
+    margin: 0;
+    text-align: center;
+    color: #FFF;
+    line-height: 30px; }
+
+.app-container {
+  min-height: 100%;
+  position: relative; }
 
 .page-container {
   padding: 20px 15px; }
@@ -259,37 +315,6 @@ table {
     margin: auto;
     box-shadow: 5px 5px 15px #222, -5px -5px 15px #222;
     background: #222; }
-
-body {
-  position: relative;
-  font-family: Calibri;
-  text-rendering: optimizeLegibility;
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: grayscale;
-  -moz-font-smoothing: antialiased;
-  color: #2F1A45;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-  min-width: 360px;
-  font-size: 16px;
-  background: #F2F3F5; }
-
-a {
-  cursor: pointer;
-  text-decoration: none; }
-
-input {
-  line-height: 30px;
-  height: 30px;
-  padding: 0 5px;
-  border: solid 1px #E27203; }
-  input:focus {
-    outline: none; }
-
-h1 {
-  font-size: 2rem; }
 
 @keyframes loading-bar {
   0%, 40%, 100% {

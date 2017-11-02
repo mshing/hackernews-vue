@@ -34,6 +34,27 @@
     }
 }
 
+.footer {
+    height:30px;
+    background:$orange;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    box-shadow:0px -1px 3px 0px $orange;
+
+    &__copy {
+        margin:0;
+        text-align:center;
+        color:$white;
+        line-height:30px;
+    }
+}
+
+.app-container {
+    min-height:100%;
+    position:relative;
+}
+
 .page-container {
     padding:20px 15px;
 

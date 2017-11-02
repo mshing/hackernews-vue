@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app-container">
     <header class="header">
       <router-link class="header__link header__link--home" to="/">V</router-link>
       <router-link class="header__link" to="/Top/">Top</router-link>
@@ -16,6 +16,9 @@
     <transition name="fade">
       <LoadingOverlay v-if="ajaxCallsInProgress > 0" />
     </transition>
+    <footer class="footer">
+      <p class="footer__copy">&copy;Footer</p>
+    </footer>
   </div>
 </template>
 
