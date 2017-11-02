@@ -16,6 +16,8 @@ const getters = {
 // actions
 const actions = {
   youtubeSearch (context, params) {
+    state.videos = null
+
     ajaxStatus.actions.ajaxCallBegin(context)
 
     return fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${params.search}&key=AIzaSyCXJq_nDZuqyo_iyCqGj7RgSQSya6IdYoA`).then((result) => {

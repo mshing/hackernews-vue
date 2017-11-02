@@ -135,12 +135,15 @@
 }
 
 .gallery {
-    text-align:center;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    margin:-5px;
-    margin-bottom:20px;
+    &__container {
+        text-align:center;
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        margin:-5px;
+        margin-bottom:20px;
+        min-height:100px;
+    }
 
     &__item {
         float:left;
@@ -166,6 +169,16 @@
         align-self:center;
         margin-top:auto;
         margin-bottom:auto;
+        background-color: rgba(0,0,0,.05);
+        padding-bottom:60.7%;
+        height:0;
+        position:relative;
+
+        img {
+            display:block;
+            width:100%;
+            position:absolute;
+        }
     }
 }
 
