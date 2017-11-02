@@ -88,6 +88,9 @@ h1 {
 p {
   margin-bottom: 10px; }
 
+main {
+  position: relative; }
+
 .header {
   height: 40px;
   background: #E27203;
@@ -364,23 +367,18 @@ p {
   100% {
     transform: translate3D(100%, 0, 0); } }
 
-.page-transition-enter, .page-transition-leave-to {
-  opacity: 0.1;
-  transform: translate3D(0, 20px, 0); }
+.page-transition-enter {
+  opacity: 0.1; }
 
 .page-transition-enter-active {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  transform: translate3D(0, 0, 0); }
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; }
 
-.page-transition-leave {
-  opacity: 1;
-  transform: translate3D(0, 0, 0); }
-
-.page-transition-leave-active {
+.page-transition-leave-active, .page-transition-leave-to {
+  position: absolute;
+  width: 100%;
+  top: 0;
   opacity: 0.1;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  transform: translate3D(0, 20px, 0); }
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; }
 
 .slide-fade-enter-active {
   animation: slide-down .5s reverse; }

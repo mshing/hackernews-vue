@@ -96,13 +96,14 @@ input {
 button {
 }
 
-main > div {
-}
-
 h1 {
     font-size:2rem;
 }
 
 p {
     margin-bottom:10px;
+}
+
+main {
+	position:relative;
 }
