@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import NewsPage from '@/containers/NewsPage'
 import AboutPage from '@/containers/AboutPage'
 import VideoPage from '@/containers/VideoPage'
+import VideoResults from '@/components/VideoResults'
+import VideoChannel from '@/components/VideoChannel'
 
 Vue.use(Router)
 
@@ -48,8 +50,19 @@ export default new Router({
     },
     {
       path: '/videos/',
-      name: 'Videos',
-      component: VideoPage
+      component: VideoPage,
+      children: [
+        {
+          name: 'Videos',
+          path: '',
+          component: VideoResults
+        },
+        {
+          path: 'channel/:id',
+          component: VideoChannel,
+          props: true
+        }
+      ]
     }
   ]
 })

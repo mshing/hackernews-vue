@@ -89,11 +89,11 @@
     vertical-align:middle;
 
     &:hover {
-        box-shadow: 0px 2px 3px rgba($orange, 0.4), inset 50px 50px 50px 50px rgba($orange, 0.1);
+        box-shadow:0px 2px 3px rgba($orange, 0.4), inset 50px 50px 50px 50px rgba($orange, 0.1);
     }
 
     &:active {
-        box-shadow: 0px 2px 3px rgba($orange, 0.4), inset  50px 50px 50px 50px rgba($orange, 0.8);
+        box-shadow:0px 2px 3px rgba($orange, 0.4), inset  50px 50px 50px 50px rgba($orange, 0.8);
         color:$white;
     }
 
@@ -101,6 +101,14 @@
         display:inline-block;
         margin:0;
         margin-left:-1px;
+
+        &:hover {
+            box-shadow:inset 50px 50px 50px 50px rgba($orange, 0.1);
+        }
+
+        &:active {
+            box-shadow:inset  50px 50px 50px 50px rgba($orange, 0.8);
+        }
     }
 
     &:focus {

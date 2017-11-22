@@ -11,12 +11,12 @@
       <router-link class="header__link" to="/Videos/">Videos</router-link>
     </header>
     <main>
-      <transition name="page-transition">
+      <transition name="">
         <router-view :key="$route.fullPath"></router-view>
       </transition>
     </main>
-    <transition name="fade">
-      <LoadingOverlay v-if="ajaxCallsInProgress > 0" />
+    <transition name="fade" :duration="500">
+      <LoadingOverlay v-show="ajaxCallsInProgress > 0" />
     </transition>
     <footer class="footer">
       <p class="footer__copy">&copy;Footer</p>
